@@ -1,14 +1,23 @@
 # Finance App
 
-A modern financial management application to help you track and manage your finances effectively.
+A modern, responsive financial management application to help you track and manage your finances effectively. Works seamlessly on both desktop and mobile devices.
 
 ## Repository
 
 GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz/financeapp.git)
 
+## Features
+
+- 📱 Responsive design that works on desktop and mobile
+- 🔒 Secure authentication with JWT
+- 💰 Expense tracking and categorization
+- 📊 Visual expense analytics
+- 🏷️ Custom category management
+- 📱 Mobile-friendly interface
+
 ## Development Progress
 
-### Phase 1 - Foundation (MVP)
+### Phase 1 - Foundation (MVP) ✨
 - [x] Project setup and infrastructure
   - [x] Next.js frontend setup
   - [x] NestJS backend setup
@@ -21,6 +30,7 @@ GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz
   - [x] Simple email/password auth
   - [x] JWT token-based sessions
   - [x] Password hashing
+  - [x] Protected routes
 - [ ] Core expense tracking
   - [ ] Basic CRUD operations
   - [ ] Simple categorization
@@ -29,14 +39,18 @@ GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz
   - [ ] Simple expense list
   - [ ] Basic charts (monthly overview)
 
-### Future Enhancements
-- Enhanced Authentication (When Needed)
-  - OAuth providers (Google, GitHub)
-  - Two-factor authentication
-  - Password reset flow
-  - Session management
-  - Rate limiting
-  
+### Phase 2 - Enhanced Features 🚀
+- Mobile Optimization
+  - [ ] PWA support
+  - [ ] Offline capabilities
+  - [ ] Touch-optimized interactions
+  - [ ] Native-like animations
+- Enhanced Authentication
+  - [ ] OAuth providers (Google, GitHub)
+  - [ ] Two-factor authentication
+  - [ ] Password reset flow
+  - [ ] Session management
+  - [ ] Rate limiting
 - Advanced Features
   - [ ] Income management
   - [ ] Basic budgeting
@@ -53,6 +67,7 @@ GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz
 - Components: shadcn/ui
 - State Management: Zustand 5.0.3 + React Query 5.67.2
 - Data Visualization: Recharts/Chart.js
+- Mobile Support: Responsive design, touch-friendly UI
 
 ### Backend
 - Runtime: Node.js
@@ -60,12 +75,14 @@ GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz
 - Database: PostgreSQL (Neon.tech)
 - ORM: Prisma
 - Authentication: JWT + bcrypt
+- Security: Helmet, CORS, Rate limiting
 
 ### Infrastructure
 - Frontend Hosting: Vercel
 - Database: Neon.tech
 - Version Control: Git
 - Package Manager: pnpm
+- API Documentation: Swagger/OpenAPI (coming soon)
 
 ## Getting Started
 
@@ -150,11 +167,39 @@ financeapp/
 └── README.md
 ```
 
+## Mobile Support
+
+The application is designed to be fully responsive and mobile-friendly:
+
+- **Responsive Design**: Works on all screen sizes
+- **Mobile Navigation**: Touch-friendly menu and interactions
+- **Progressive Enhancement**: Basic functionality works everywhere
+- **Future PWA Support**: Planned offline capabilities
+
+### Mobile Features
+- Responsive layouts
+- Touch-friendly inputs
+- Mobile-optimized forms
+- Swipe gestures (coming soon)
+- Native-like experience
+
 ## Contributing
 
 1. Create a new branch for your feature
 2. Make your changes
 3. Submit a pull request
+
+## Security
+
+The application implements several security best practices:
+
+- JWT-based authentication
+- Password hashing with bcrypt
+- CORS protection
+- Security headers with Helmet
+- Input validation
+- Error handling
+- Rate limiting (coming soon)
 
 ## License
 
