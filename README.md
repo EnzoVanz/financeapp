@@ -17,10 +17,10 @@ GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz
   - [x] PostgreSQL with Neon.tech
   - [x] Prisma ORM configuration
   - [x] Initial schema (Users, Expenses, Categories)
-- [ ] Basic user authentication
-  - [ ] Simple email/password auth
-  - [ ] JWT token-based sessions
-  - [ ] Password hashing
+- [x] Basic user authentication
+  - [x] Simple email/password auth
+  - [x] JWT token-based sessions
+  - [x] Password hashing
 - [ ] Core expense tracking
   - [ ] Basic CRUD operations
   - [ ] Simple categorization
@@ -48,15 +48,15 @@ GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz
 ## Tech Stack
 
 ### Frontend
-- Framework: Next.js 14 (React + TypeScript)
+- Framework: Next.js 15.2.1 (React 19.0.0 + TypeScript)
 - Styling: Tailwind CSS
 - Components: shadcn/ui
-- State Management: Zustand + React Query
+- State Management: Zustand 5.0.3 + React Query 5.67.2
 - Data Visualization: Recharts/Chart.js
 
 ### Backend
 - Runtime: Node.js
-- Framework: NestJS
+- Framework: NestJS 10.0.0
 - Database: PostgreSQL (Neon.tech)
 - ORM: Prisma
 - Authentication: JWT + bcrypt
@@ -95,14 +95,38 @@ GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz
    ```
 
 4. Start development servers
-   ```bash
-   # Start backend
-   cd apps/api
-   pnpm run start:dev
+   You'll need to run both the frontend and backend servers in separate terminals:
 
-   # In another terminal, start frontend
-   cd apps/web
-   pnpm run dev
+   ```bash
+   # Terminal 1 - Run backend
+   pnpm api:dev
+
+   # Terminal 2 - Run frontend
+   pnpm web:dev
+
+   # Alternative: Run just what you need
+   pnpm dev        # Runs only frontend
+   pnpm api:dev    # Runs only backend
+   ```
+
+   The application will be available at:
+   - Frontend: http://localhost:3000
+   - Backend: http://localhost:3001
+
+## Database Management
+
+This project uses Neon.tech for PostgreSQL hosting. You can manage your database through:
+
+1. **Neon Console**
+   - View and manage tables
+   - Run SQL queries
+   - Monitor performance
+   - Set up development branches
+
+2. **Prisma Studio**
+   ```bash
+   cd apps/api
+   npx prisma studio
    ```
 
 ## Project Structure
@@ -112,14 +136,17 @@ financeapp/
 │   ├── web/                 # Next.js frontend
 │   │   ├── app/            # App router pages
 │   │   ├── components/     # React components
-│   │   └── lib/           # Utilities
+│   │   └── lib/            # Utilities
 │   └── api/                # NestJS backend
 │       ├── src/
-│       │   ├── auth/       # Authentication
+│       │   ├── auth/       # Authentication (Implemented)
 │       │   ├── expenses/   # Expense management
 │       │   └── users/      # User management
 │       └── prisma/         # Database schema
-├── packages/               # Shared packages
+├── packages/
+│   ├── types/             # Shared TypeScript types
+│   ├── config/            # Shared configuration
+│   └── database/          # Database utilities
 └── README.md
 ```
 
