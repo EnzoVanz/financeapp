@@ -15,7 +15,7 @@ GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz
 - 🏷️ Custom category management
 - 📱 Mobile-friendly interface
 
-## Development Progress
+## Development Progress & Roadmap
 
 ### Phase 1 - Foundation (MVP) ✨
 - [x] Project setup and infrastructure
@@ -32,19 +32,30 @@ GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz
   - [x] Password hashing
   - [x] Protected routes
 - [ ] Core expense tracking
-  - [ ] Basic CRUD operations
-  - [ ] Simple categorization
-  - [ ] Essential data model
+  - [ ] Expense CRUD API endpoints
+  - [ ] Expense form component
+  - [ ] Expense listing page
+  - [ ] Category management
+  - [ ] Filters and sorting
 - [ ] Basic dashboard
-  - [ ] Simple expense list
-  - [ ] Basic charts (monthly overview)
+  - [ ] Expense summary cards
+  - [ ] Monthly expense breakdown
+  - [ ] Category distribution chart
+  - [ ] Recent transactions list
 
 ### Phase 2 - Enhanced Features 🚀
+- Core Feature Enhancements
+  - [ ] Advanced filtering and search
+  - [ ] Bulk operations
+  - [ ] Export to CSV/PDF
+  - [ ] Recurring expenses
+  - [ ] Budget alerts
 - Mobile Optimization
   - [ ] PWA support
   - [ ] Offline capabilities
   - [ ] Touch-optimized interactions
   - [ ] Native-like animations
+  - [ ] Swipe gestures
 - Enhanced Authentication
   - [ ] OAuth providers (Google, GitHub)
   - [ ] Two-factor authentication
@@ -53,11 +64,38 @@ GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz
   - [ ] Rate limiting
 - Advanced Features
   - [ ] Income management
-  - [ ] Basic budgeting
-  - [ ] Essential reports
+  - [ ] Budget planning
+  - [ ] Financial goals
+  - [ ] Savings tracking
+  - [ ] Investment portfolio
+  - [ ] Multi-currency support
   - [ ] Enhanced categorization
   - [ ] Data import/export
   - [ ] Email notifications
+  - [ ] Expense insights and AI analysis
+
+### Phase 3 - Polish & Scale 🌟
+- Performance
+  - [ ] API optimization
+  - [ ] Image optimization
+  - [ ] Caching strategies
+  - [ ] Database indexing
+- Analytics & Reporting
+  - [ ] Advanced analytics dashboard
+  - [ ] Custom report builder
+  - [ ] Expense forecasting
+  - [ ] Trend analysis
+- User Experience
+  - [ ] Onboarding flow
+  - [ ] Tooltips and guides
+  - [ ] Keyboard shortcuts
+  - [ ] Theme customization
+- Infrastructure
+  - [ ] CI/CD pipeline
+  - [ ] Automated testing
+  - [ ] Error monitoring
+  - [ ] Performance monitoring
+  - [ ] Auto-scaling setup
 
 ## Tech Stack
 
