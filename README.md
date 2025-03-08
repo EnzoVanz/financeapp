@@ -6,132 +6,44 @@ A modern financial management application to help you track and manage your fina
 
 GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz/financeapp.git)
 
-## Development Phases
+## Development Progress
 
 ### Phase 1 - Foundation (MVP)
 - [x] Project setup and infrastructure
-- [ ] Basic user authentication (email + OAuth)
+  - [x] Next.js frontend setup
+  - [x] NestJS backend setup
+  - [x] Monorepo structure
+- [x] Database setup
+  - [x] PostgreSQL with Neon.tech
+  - [x] Prisma ORM configuration
+  - [x] Initial schema (Users, Expenses, Categories)
+- [ ] Basic user authentication
+  - [ ] Simple email/password auth
+  - [ ] JWT token-based sessions
+  - [ ] Password hashing
 - [ ] Core expense tracking
-  - Basic CRUD operations
-  - Simple categorization
-  - Essential data model
+  - [ ] Basic CRUD operations
+  - [ ] Simple categorization
+  - [ ] Essential data model
 - [ ] Basic dashboard
-  - Simple expense list
-  - Basic charts (monthly overview)
-- [ ] MVP database schema
-- [ ] Essential API endpoints
+  - [ ] Simple expense list
+  - [ ] Basic charts (monthly overview)
 
-### Phase 2 - Core Features
-- [ ] Income management
-- [ ] Basic budgeting
-- [ ] Essential reports
-- [ ] Enhanced categorization
-- [ ] Data import/export
-- [ ] Email notifications
-
-### Phase 3 - Enhancement
-- [ ] Advanced budgeting features
-- [ ] Comprehensive reporting
-- [ ] Receipt management
-- [ ] Multi-currency support
-- [ ] Performance optimization
-- [ ] Advanced data visualization
-
-### Phase 4 - Additional Features
-- [ ] Savings goals
-- [ ] Bill reminders
-- [ ] Financial calendar
-- [ ] Investment tracking
-- [ ] API improvements
-- [ ] Mobile optimization
-
-## Features
-
-### Core Features
-- [ ] User Authentication & Security
-  - User registration and login
-  - Email verification
-  - Password reset
-  - OAuth integration
-  - Data encryption
-
-- [ ] Expense Tracking
-  - Add, edit, delete expenses
-  - Expense categorization
-  - Receipt management
-  - Multi-currency support
-  - Tags and notes
-
-- [ ] Income Management
-  - Multiple income sources
-  - Income categorization
-  - Recurring income
-  - Tax category tagging
-
-- [ ] Budget Planning
-  - Monthly/yearly budgets
-  - Category-wise allocation
-  - Budget vs actual comparison
-  - Budget alerts
-  - Budget templates
-
-- [ ] Financial Reports
-  - Monthly/yearly analysis
-  - Income vs expense reports
-  - Category breakdown
-  - Export functionality
-  - Custom date ranges
-
-- [ ] Data Visualization
-  - Interactive charts
-  - Expense distribution
-  - Trend analysis
-  - Budget progress tracking
-
-### Additional Features
-- [ ] Savings goals tracking
-- [ ] Bill payment reminders
-- [ ] Financial calendar
-- [ ] Net worth tracking
-- [ ] Investment portfolio (basic)
-- [ ] Multi-device sync
-- [ ] Dark/light theme
-
-## Technical Requirements
-
-### Frontend
-- Responsive design (mobile-first)
-- Progressive Web App (PWA)
-- Offline functionality
-- Modern UI framework
-- Component-based architecture
-
-### Backend
-- RESTful API architecture
-- Real-time updates
-- Secure authentication
-- Data validation
-- Caching system
-
-### Database
-- Relational database
-- Query optimization
-- Data encryption
-- Backup and recovery
-- Schema versioning
-
-### Security
-- HTTPS encryption
-- Two-factor authentication
-- GDPR compliance
-- Regular security audits
-- API key management
-
-### Performance
-- Fast page load times (<3s)
-- Efficient caching
-- Optimized queries
-- CDN integration
+### Future Enhancements
+- Enhanced Authentication (When Needed)
+  - OAuth providers (Google, GitHub)
+  - Two-factor authentication
+  - Password reset flow
+  - Session management
+  - Rate limiting
+  
+- Advanced Features
+  - [ ] Income management
+  - [ ] Basic budgeting
+  - [ ] Essential reports
+  - [ ] Enhanced categorization
+  - [ ] Data import/export
+  - [ ] Email notifications
 
 ## Tech Stack
 
@@ -144,97 +56,78 @@ GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz
 
 ### Backend
 - Runtime: Node.js
-- Framework: Express.js/NestJS
-- API: RESTful with OpenAPI/Swagger
-- Authentication: NextAuth.js
-
-### Database
-- Primary: PostgreSQL
-- Caching: Redis
+- Framework: NestJS
+- Database: PostgreSQL (Neon.tech)
 - ORM: Prisma
+- Authentication: JWT + bcrypt
 
 ### Infrastructure
-
-#### Development/MVP Setup (Free Tier)
-- Frontend Hosting: Vercel (Free)
-- Backend Hosting: Vercel Serverless Functions (Free)
-- Database: Supabase or Neon.tech (Free)
-- Email Service: SendGrid (Free up to 100 emails/day)
-- CI/CD: GitHub Actions (Free for public repositories)
-
-#### Production Setup (When Needed)
-- Frontend Hosting: Vercel (Scale as needed)
-- Backend Hosting: Railway/Fly.io
-- Database Hosting: Supabase/Railway
-- Redis Hosting: Upstash
-- CI/CD: GitHub Actions
-
-### Development Tools
+- Frontend Hosting: Vercel
+- Database: Neon.tech
 - Version Control: Git
 - Package Manager: pnpm
-- Code Quality: ESLint + Prettier
-- Testing: Jest + React Testing Library
-- API Testing: Postman/Insomnia
 
 ## Getting Started
 
 ### Prerequisites
-
-```bash
-# Prerequisites will be listed here once the tech stack is defined
-```
+- Node.js 18+
+- pnpm
+- PostgreSQL database (we use Neon.tech)
 
 ### Installation
 
 1. Clone the repository
    ```bash
    git clone https://github.com/EnzoVanz/financeapp.git
+   cd financeapp
    ```
 
 2. Install dependencies
    ```bash
-   # Commands will be added once the project setup is complete
+   pnpm install
    ```
 
 3. Set up environment variables
    ```bash
-   # Create a .env file based on .env.example (will be added later)
+   # Copy example env files
+   cp apps/api/.env.example apps/api/.env
+   # Then edit .env with your database credentials
    ```
 
-4. Run the development server
+4. Start development servers
    ```bash
-   # Commands will be added once the project setup is complete
+   # Start backend
+   cd apps/api
+   pnpm run start:dev
+
+   # In another terminal, start frontend
+   cd apps/web
+   pnpm run dev
    ```
 
 ## Project Structure
-
 ```
 financeapp/
 ├── apps/
 │   ├── web/                 # Next.js frontend
-│   │   ├── components/      # React components
-│   │   ├── pages/          # Next.js pages
-│   │   ├── styles/         # Global styles
-│   │   └── lib/            # Utilities
-│   └── api/                # Backend API
+│   │   ├── app/            # App router pages
+│   │   ├── components/     # React components
+│   │   └── lib/           # Utilities
+│   └── api/                # NestJS backend
 │       ├── src/
-│       │   ├── controllers/
-│       │   ├── services/
-│       │   ├── models/
-│       │   └── utils/
-│       └── tests/
+│       │   ├── auth/       # Authentication
+│       │   ├── expenses/   # Expense management
+│       │   └── users/      # User management
+│       └── prisma/         # Database schema
 ├── packages/               # Shared packages
-│   ├── database/          # Database schemas & migrations
-│   ├── config/           # Shared configuration
-│   └── types/            # Shared TypeScript types
-├── docker/               # Docker configuration
-├── docs/                 # Documentation
-└── scripts/              # Development scripts
+└── README.md
 ```
 
 ## Contributing
 
-Instructions for contributing will be added as the project develops.
+1. Create a new branch for your feature
+2. Make your changes
+3. Submit a pull request
 
 ## License
 
