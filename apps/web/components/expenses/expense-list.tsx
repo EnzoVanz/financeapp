@@ -6,18 +6,11 @@ import { Edit2, Trash2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { api } from '@/lib/api-client'
+import { Expense } from '@finance/types'
 
 interface Category {
   id: string
   name: string
-}
-
-interface Expense {
-  id: string
-  amount: number
-  description: string
-  date: string
-  category: Category
 }
 
 interface ExpenseListProps {

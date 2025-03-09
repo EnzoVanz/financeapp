@@ -7,20 +7,10 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { api } from '@/lib/api-client'
-
-interface Category {
-  id: string
-  name: string
-}
+import { Category, ExpenseFormData } from '@finance/types'
 
 interface ExpenseFormProps {
-  initialData?: {
-    id: string
-    amount: number
-    description: string
-    date: string
-    categoryId: string
-  }
+  initialData?: ExpenseFormData
   categories: Category[]
   onSuccess?: () => void
   onCancel?: () => void

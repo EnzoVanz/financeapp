@@ -6,20 +6,7 @@ import { Button } from '@/components/ui/button'
 import { ExpenseForm } from '@/components/expenses/expense-form'
 import { ExpenseList } from '@/components/expenses/expense-list'
 import { api } from '@/lib/api-client'
-
-interface Category {
-  id: string
-  name: string
-}
-
-interface Expense {
-  id: string
-  amount: number
-  description: string
-  date: string
-  category: Category
-  categoryId: string
-}
+import { Category, Expense, ExpenseResponse, CategoryResponse } from '@finance/types'
 
 export default function ExpensesPage() {
   const [showForm, setShowForm] = useState(false)
@@ -36,7 +23,7 @@ export default function ExpensesPage() {
 
   async function fetchExpenses() {
     try {
-      const response = await api.get<{ expenses: Expense[] }>('/expenses')
+      const response = await api.get<ExpenseResponse>('/expenses')
       if (response.data) {
         setExpenses(response.data.expenses)
       }
@@ -49,7 +36,7 @@ export default function ExpensesPage() {
 
   async function fetchCategories() {
     try {
-      const response = await api.get<{ categories: Category[] }>('/categories')
+      const response = await api.get<CategoryResponse>('/categories')
       if (response.data) {
         setCategories(response.data.categories)
       }

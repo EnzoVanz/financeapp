@@ -2,18 +2,27 @@
 
 A modern, responsive financial management application to help you track and manage your finances effectively. Works seamlessly on both desktop and mobile devices.
 
-## Repository
+## Project Structure
 
-GitHub: [https://github.com/EnzoVanz/financeapp.git](https://github.com/EnzoVanz/financeapp.git)
+```
+financeapp/
+├── apps/
+│   ├── api/         # Backend API service
+│   └── web/         # Next.js frontend application
+└── packages/
+    └── types/       # Shared TypeScript types
+```
 
 ## Features
 
-- 📱 Responsive design that works on desktop and mobile
-- 🔒 Secure authentication with JWT
-- 💰 Expense tracking and categorization
-- 📊 Visual expense analytics
-- 🏷️ Custom category management
-- 📱 Mobile-friendly interface
+- 💰 Expense Management
+  - Create, read, update, and delete expenses
+  - Categorize expenses
+  - View expense summaries and statistics
+- 🔒 User Authentication
+- 📱 Responsive Design
+- 🎨 Modern UI with Tailwind CSS
+- 🔄 Real-time Updates
 
 ## Development Progress & Roadmap
 
