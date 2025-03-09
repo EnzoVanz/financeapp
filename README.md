@@ -41,9 +41,9 @@ financeapp/
   - [x] Password hashing
   - [x] Protected routes
 - [ ] Core expense tracking
-  - [ ] Expense CRUD API endpoints
-  - [ ] Expense form component
-  - [ ] Expense listing page
+  - [x] Expense CRUD API endpoints
+  - [x] Expense form component
+  - [x] Expense listing page
   - [ ] Category management
   - [ ] Filters and sorting
 - [ ] Basic dashboard
